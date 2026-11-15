@@ -1,0 +1,33 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Donate | KIOF</title>
+<meta name="description" content="Support Kingdom Impact Outreach Foundation. Demo donation interface; payments are not yet connected.">
+<meta property="og:title" content="Donate | KIOF"><meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script><script src="https://unpkg.com/lucide@latest"></script>
+<link rel="stylesheet" href="css/style.css"></head><body>
+<a href="#main" class="sr-only focus:not-sr-only p-3">Skip to content</a><header id="site-header"></header><main id="main">
+
+<section class="bg-[#12365A] py-16 px-5 text-center"><h1 class="text-4xl md:text-5xl" style="color:#fff">Your Generosity Can Change Lives.</h1>
+ <p class="text-slate-200 mt-4 max-w-xl mx-auto">Donations help KIOF fund outreach, education, skills training and humanitarian support. <em>[Exact use of funds to be confirmed by the foundation.]</em></p></section>
+<section class="max-w-2xl mx-auto px-5 py-12">
+ <p class="p-4 rounded-lg bg-[#FFF4E9] text-sm mb-8"><b>Demo mode.</b> No payment is processed, no card details are collected, and nothing is stored.</p>
+ <form id="donate-form" novalidate class="space-y-8">
+ <fieldset><legend class="font-bold text-[#12365A] mb-3">Amount (₦)</legend>
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+   <button type="button" class="amt" data-v="5000" aria-pressed="false">₦5,000</button><button type="button" class="amt" data-v="10000" aria-pressed="true">₦10,000</button>
+   <button type="button" class="amt" data-v="20000" aria-pressed="false">₦20,000</button><button type="button" class="amt" data-v="50000" aria-pressed="false">₦50,000</button></div>
+  <label class="block mt-3 text-sm" for="custom">Custom amount</label><input id="custom" type="number" min="500" class="field" placeholder="Enter amount"></fieldset>
+ <fieldset><legend class="font-bold text-[#12365A] mb-3">Frequency</legend><div class="grid grid-cols-2 gap-3">
+  <button type="button" class="amt" data-freq="once" aria-pressed="true">One-time</button>
+  <button type="button" class="amt" data-freq="monthly" aria-pressed="false">Monthly <small class="block font-normal text-slate-500">Proposed; recurring billing not built</small></button></div></fieldset>
+ <fieldset class="space-y-3"><legend class="font-bold text-[#12365A] mb-1">Your details</legend>
+  <div><label for="name" class="text-sm">Full name</label><input id="name" class="field" autocomplete="name"></div>
+  <div><label for="email" class="text-sm">Email address</label><input id="email" type="email" class="field" autocomplete="email"></div>
+  <div><label for="note" class="text-sm">Message (optional)</label><textarea id="note" rows="3" class="field"></textarea></div></fieldset>
+ <fieldset><legend class="font-bold text-[#12365A] mb-3">Payment method</legend><div class="grid sm:grid-cols-2 gap-3">
+  <button type="button" class="pay" data-m="paystack" aria-pressed="true"><b class="text-[#12365A]">Paystack</b><small class="block text-slate-600">Nigerian donors and eligible international cards</small></button>
+  <button type="button" class="pay" data-m="paypal" aria-pressed="false"><b class="text-[#12365A]">PayPal</b><small class="block text-slate-600">Supporters who prefer PayPal. Eligibility to be confirmed.</small></button></div></fieldset>
+ <div id="msg-box" hidden role="status"></div>
+ <button class="btn btn-o w-full justify-center">Continue to payment</button></form></section>
+
+</main><footer id="site-footer"></footer><script src="js/main.js"></script><script src="js/donation.js"></script></body></html>
